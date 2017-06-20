@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<paths xmlns:android="http://schemas.android.com/apk/res/android">-->
+    <!--<external-path-->
+        <!--name="my_images"-->
+        <!--path="Android/data/com.example.feng.cammer7/files/Pictures" />-->
+<!--</paths>-->
+
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-path
+        name="my_images"
+        path="" />
+</paths>
+    <!--<resources>-->
+    <!--<paths xmlns:android="http://schemas.android.com/apk/res/android">-->
+        <!--<external-path-->
+            <!--name="my_images"-->
+            <!--path="Android/data/com.example.feng.cammer7/files/Pictures" />-->
+    <!--</paths>-->
+<!--</resources>-->
+
+<!--< files-path/>代表的根目录为： Context.getFilesDir() -->
+<!--< external-path/>代表的根目录为: Environment.getExternalStorageDirectory() -->
+<!--< cache-path/>代表的根目录为: getCacheDir() 上述代码中path=”“，是有特殊意义的，它代码根目录，也就是说你可以向其它的应用共享根目录及其子目录下任何一个文件了，-->
+    <!--如果你将path设为path=”pictures”， 那么它代表着根目录下的pictures目录(eg:/storage/emulated/0/pictures)，如果你向其它应用分享pictures目录范围之外的文件是不行的。-->
+
+
+<!--<files-path name="name" path="path/" />   等同于Context.getFilesDir()下面的path文件夹的所有文件-->
+<!--<cache-path name="name" path="path/" />  等同于Context.getCacheDir()下面的path文件夹-->
+<!--<external-path name="name" path="path/" />  等同于Environment.getExternalStorageDirectory()下面的path文件夹-->
+<!--<external-files-path name="name" path="path/" /> 等同于 Context#getExternalFilesDir(String)下面子文件path文件夹-->
+<!--<external-cache-path name="name" path="path/" /> 相当于 Context.getExternalCacheDir()下边的path文件夹-->
