@@ -79,10 +79,16 @@ public class MainActivity extends AppCompatActivity {
             }
 
             if (photoFile != null) {
-                Uri photoURI = FileProvider.getUriForFile(this, "com.example.feng.cammer7.fileprovider", photoFile);
+                
+            }
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N){
+                  Uri photoURI = FileProvider.getUriForFile(this, "com.example.feng.cammer7.fileprovider", photoFile);
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                 startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
-            }
+                }else {
+                    takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(photoFile));
+                    startActivityForResult(takePictureIntent, TAKE_PICTURE);
+                }
         }
     }
 
